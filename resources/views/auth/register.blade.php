@@ -30,10 +30,31 @@
             <div class="col-lg-4 mx-auto">
               <h2 class="text-center mb-4">Register</h2>
               <div class="auto-form-wrapper">
-                <form action="#">
+                @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+                <form action="{{ url('/register') }}" method="post">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Name" name="name">
+                        <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="mdi mdi-check-circle-outline"></i>
+                        </span>
+                        </div>
+                    </div>
+                    </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Username">
+                      <input type="text" class="form-control" placeholder="email" name="email">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -43,7 +64,7 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <input type="password" class="form-control" placeholder="Password">
+                      <input type="password" class="form-control" placeholder="Password" name="password">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -53,7 +74,7 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <input type="password" class="form-control" placeholder="Confirm Password">
+                      <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -68,13 +89,14 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <button class="btn btn-primary submit-btn btn-block">Register</button>
+                    <button type="submit" class="btn btn-primary submit-btn btn-block">Register</button>
                   </div>
                   <div class="text-block text-center my-3">
                     <span class="text-small font-weight-semibold">Already have and account ?</span>
                     <a href="/login" class="text-black text-small">Login</a>
                   </div>
                 </form>
+
               </div>
             </div>
           </div>
