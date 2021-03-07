@@ -30,21 +30,6 @@
             <div class="col-lg-4 mx-auto">
               <h2 class="text-center mb-4">Register</h2>
               <div class="auto-form-wrapper">
-                {{-- @if (count($errors) > 0)
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                        @error('name')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $error->name }}</strong>
-                            </span>
-                        @enderror
-                    </ul>
-                </div>
-                @endif --}}
-
                 <form action="{{ url('/register') }}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
