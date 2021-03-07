@@ -108,7 +108,15 @@ $(function () {
         borderColor: ChartColor[0],
         borderWidth: 3,
         fill: 'false',
-        label: "Sales"
+        label: "Pemasukan"
+      },
+      {
+        data: [0, 100, 200, 150, 50, 70, 100, 90, 40],
+        backgroundColor: ChartColor[1],
+        borderColor: ChartColor[1],
+        borderWidth: 3,
+        fill: 'false',
+        label: "Pengeluaran"
       }]
     };
     var lineOptions = {
@@ -160,7 +168,7 @@ $(function () {
             maxRotation: 0,
             stepSize: 100,
             min: 0,
-            max: 300
+            max: 250
           },
           gridLines: {
             drawBorder: false
