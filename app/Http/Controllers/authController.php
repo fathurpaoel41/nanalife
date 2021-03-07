@@ -5,9 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
-use Validator;
-use Hash;
-use Session;
 use App\User;
 use Illuminate\Support\Facades\Hash as FacadesHash;
 
@@ -21,7 +18,7 @@ class authController extends Controller
             'password' => 'required|confirmed'
         ];
 
-        $messages = [
+        $message = [
             'name.required' => 'Nama Tidak Boleh Kosong',
             'name.min' => 'Nama minimal 3 karakter',
             'name.max' => 'Nama Maksimal 35 karakter',
@@ -32,7 +29,7 @@ class authController extends Controller
             'password.confirmed' => 'password tidak sama',
         ];
 
-        $this->validate($request,$rules,$messages);
+        $this->validate($request,$rules,$message);
 
         $user = new User;
         $user->name = ucwords(strtolower($request->name));
@@ -47,6 +44,18 @@ class authController extends Controller
 
     public function login(Request $request)
     {
+        $rules = [
+            'email' => 'required|email',
+            'password' => 'required',
+        ];
+        $messages = [
+            'email.required' => 'email harus diisi',
+            'email.email' => 'email tidak valid',
+            'password.required' => 'password harus diisi',
+        ];
+
+        $this->validate($request, $rules, $messages);
+
         $data = [
             'email'     => $request->input('email'),
             'password'  => $request->input('password'),
@@ -55,8 +64,10 @@ class authController extends Controller
         if (Auth::attempt($data)) {
             return redirect()->route('index');
         }
+        else{
+            return redirect('login')->with('error','Opps! Email dan Password salah');
+        }
 
-        return 'Failure';
     }
 
     public function logout()

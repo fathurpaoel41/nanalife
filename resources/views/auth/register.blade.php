@@ -30,15 +30,20 @@
             <div class="col-lg-4 mx-auto">
               <h2 class="text-center mb-4">Register</h2>
               <div class="auto-form-wrapper">
-                @if (count($errors) > 0)
+                {{-- @if (count($errors) > 0)
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
                         @endforeach
+                        @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $error->name }}</strong>
+                            </span>
+                        @enderror
                     </ul>
                 </div>
-                @endif
+                @endif --}}
 
                 <form action="{{ url('/register') }}" method="post">
                     {{ csrf_field() }}
@@ -47,7 +52,7 @@
                         <input type="text" class="form-control" placeholder="Name" name="name">
                         <div class="input-group-append">
                         <span class="input-group-text">
-                            <i class="mdi mdi-check-circle-outline"></i>
+                            <i class="mdi mdi-check-circle-outline">{{ $errors->first('name') }}</i>
                         </span>
                         </div>
                     </div>
@@ -57,7 +62,7 @@
                       <input type="text" class="form-control" placeholder="email" name="email">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="mdi mdi-check-circle-outline"></i>
+                          <i class="mdi mdi-check-circle-outline">{{ $errors->first('email') }}</i>
                         </span>
                       </div>
                     </div>
@@ -67,7 +72,7 @@
                       <input type="password" class="form-control" placeholder="Password" name="password">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="mdi mdi-check-circle-outline"></i>
+                          <i class="mdi mdi-check-circle-outline">{{ $errors->first('password') }}</i>
                         </span>
                       </div>
                     </div>
@@ -77,7 +82,7 @@
                       <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="mdi mdi-check-circle-outline"></i>
+                          <i class="mdi mdi-check-circle-outline">{{ $errors->first('password') }}</i>
                         </span>
                       </div>
                     </div>

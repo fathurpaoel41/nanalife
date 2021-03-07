@@ -26,6 +26,11 @@
           <div class="row w-100">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
+                @if(session()->has('error'))
+                   <div class="alert alert-danger">
+                        {{ session()->get('error') }}
+                    </div>
+                @endif
               <form action="{{ url('/login') }}" method="post">
                 @csrf
                   <div class="form-group">
@@ -34,7 +39,11 @@
                       <input type="text" class="form-control" placeholder="email" name="email">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="mdi mdi-check-circle-outline"></i>
+                        <i class="mdi mdi-check-circle-outline">
+                            @error('email')
+                                {{$message}}
+                            @enderror
+                        </i>
                         </span>
                       </div>
                     </div>
@@ -42,10 +51,14 @@
                   <div class="form-group">
                     <label class="label">Password</label>
                     <div class="input-group">
-                      <input type="password" class="form-control" placeholder="password" name="password">
+                      <input type="password" class="form-control" placeholder="password" name="password" autocomplete>
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="mdi mdi-check-circle-outline"></i>
+                          <i class="mdi mdi-check-circle-outline">
+                            @error('email')
+                                {{$message}}
+                            @enderror
+                          </i>
                         </span>
                       </div>
                     </div>
