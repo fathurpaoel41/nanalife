@@ -24,11 +24,11 @@
     <script src="../../assets/js/shared/misc.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
-    <script src="../../assets/js/shared/jquery.cookie.js" type="text/javascript"></script>
+    {{-- <script src="../../assets/js/shared/jquery.cookie.js" type="text/javascript"></script> --}}
 
     <script src="../../assets/js/shared/chart.js"></script>
     <!-- End custom js for this page-->
-    <script src="../../assets/js/shared/jquery.cookie.js" type="text/javascript"></script>
+    {{-- <script src="../../assets/js/shared/jquery.cookie.js" type="text/javascript"></script> --}}
     <!-- End custom js for this page-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 
@@ -36,4 +36,4 @@
     <script type="text/javascript" src="../../assets/js/datePicker/jquery.min.js"></script>
     <script type="text/javascript" src="../../assets/js/datePicker/moment.min.js"></script>
     <script type="text/javascript" src="../../assets/js/datePicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="h../../assets/js/datePicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/js/datePicker/daterangepicker.css" />

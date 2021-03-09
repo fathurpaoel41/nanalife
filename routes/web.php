@@ -27,6 +27,6 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::view('/index', 'pages.dashboard')->name('index');
-    Route::view('/pemasukanPengeluaran','pages.pemasukanPengeluaran')->name('pemasukanPengeluaran');
+    Route::view('/pemasukanPengeluaran','pages.pemasukanPengeluaran.pemasukanPengeluaran')->name('pemasukanPengeluaran');
     Route::get('/logout', 'authController@logout');
 });

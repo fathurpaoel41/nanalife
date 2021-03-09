@@ -1,0 +1,35 @@
+.buttonPlus {
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index:3;
+    font-size: 250%;
+}
+
+
+.buttonPlus:hover {
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index:3;
+    font-size: 250%;
+    color: red;
+}
+
+.buttonPlus:active {
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index:3;
+    font-size: 250%;
+    color: green;
+}

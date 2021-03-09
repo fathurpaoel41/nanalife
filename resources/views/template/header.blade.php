@@ -19,8 +19,9 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../assets/css/demo_1/style.css">
+    <link rel="stylesheet" href="../../assets/css/modules/buttonPlus.css">
     <!-- End Layout styles -->
-    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
+    <link href="../../assets/fontawesome/css/all.css" rel="stylesheet">
   </head>
   <body>
     <div class="container-scroller">

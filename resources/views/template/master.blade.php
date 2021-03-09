@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    @include("template.header")
+@include("template.header")
         <div class="main-panel">
           <div class="content-wrapper">
             @yield('content')
