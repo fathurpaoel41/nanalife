@@ -37,3 +37,5 @@
     <script type="text/javascript" src="../../assets/js/datePicker/moment.min.js"></script>
     <script type="text/javascript" src="../../assets/js/datePicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../../assets/js/datePicker/daterangepicker.css" />
+
+    {{-- bootstrap --}}

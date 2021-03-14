@@ -27,6 +27,10 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::view('/index', 'pages.dashboard')->name('index');
-    Route::view('/pemasukanPengeluaran','pages.pemasukanPengeluaran.pemasukanPengeluaran')->name('pemasukanPengeluaran');
+    Route::get('/pemasukanPengeluaran','pemasukanPengeluaranController@pemasukanPengeluaran')->name('pemasukanPengeluaran');
+    Route::get('/tambahPemasukanPengeluaran','pemasukanPengeluaranController@viewPemasukanPengeluaran')->name("tambahPemasukanPengeluaran");
+
     Route::get('/logout', 'authController@logout');
+
+    Route::post('/tambahPemasukanPengeluaran','pemasukanPengeluaranController@store');
 });

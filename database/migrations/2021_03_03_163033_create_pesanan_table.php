@@ -14,7 +14,7 @@ class CreatePesananTable extends Migration
     public function up()
     {
         Schema::create('pesanan', function (Blueprint $table) {
-            $table->string("kode_pesanan")->primary();
+            $table->increments("kode_pesanan");
             $table->string("kode_produk");
             $table->string("kode_costumer");
             $table->string("jumlah_pembelian");

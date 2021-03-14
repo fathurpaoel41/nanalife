@@ -55,8 +55,8 @@
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline">
-                            @error('email')
-                                {{$message}}
+                            @error('password')
+                                {{$password}}
                             @enderror
                           </i>
                         </span>
