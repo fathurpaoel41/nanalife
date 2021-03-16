@@ -64,6 +64,7 @@
                   <div class="flag-icon-holder">
                     <i class="flag-icon flag-icon-ae"></i>
                   </div>Arabic
+                  <i class="mdi mdi-cart"><span class="count">7</span></i>
                 </a>
                 <a class="dropdown-item">
                   <div class="flag-icon-holder">
@@ -205,7 +206,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/tables/basic-table.html">
+              <a class="nav-link" href="/pemesanan">
                 <i class="menu-icon typcn typcn-bell"></i>
                 <span class="menu-title">Pemesanan</span>
               </a>

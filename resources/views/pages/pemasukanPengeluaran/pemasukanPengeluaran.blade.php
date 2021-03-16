@@ -58,9 +58,9 @@
                             <td>{{$tabel->edited_by}}</td>
                         </tr>
                         @endforeach
-                                    {{-- <td>
-                                        <label class="badge badge-danger">Pending</label>
-                                    </td> --}}
+                            {{-- <td>
+                                <label class="badge badge-danger">Pending</label>
+                            </td> --}}
                     </tbody>
                 </table>
             </div>

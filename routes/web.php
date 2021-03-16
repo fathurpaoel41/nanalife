@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/tambahPemasukanPengeluaran','pemasukanPengeluaranController@viewPemasukanPengeluaran')->name("tambahPemasukanPengeluaran");
     Route::get('/dataProduk','dataProdukController@dataProdukView')->name("dataProdukView");
     Route::get('/tambahDataProduk','dataProdukController@tambahDataProdukView')->name("tambahDataProduk");
+    Route::get('/pemesanan','pemesananController@viewPemesanan')->name("viewPemesanan");
 
     Route::get('/logout', 'authController@logout');
 
