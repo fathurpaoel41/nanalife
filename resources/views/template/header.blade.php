@@ -25,6 +25,7 @@
 
     {{-- bootstrap --}}
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="container-scroller">
@@ -198,7 +199,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/charts/chartjs.html">
+              <a class="nav-link" href="/dataProduk">
                 <i class="menu-icon typcn typcn-th-large-outline"></i>
                 <span class="menu-title">Data Produk</span>
               </a>
