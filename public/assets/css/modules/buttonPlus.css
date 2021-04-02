@@ -33,3 +33,15 @@
     font-size: 250%;
     color: green;
 }
+
+.buttonTrash {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index:3;
+    font-size: 250%;
+    color: red;
+}

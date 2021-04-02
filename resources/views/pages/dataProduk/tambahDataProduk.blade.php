@@ -44,7 +44,7 @@
                     <div class="form-group">
                         <label for="beratProduk" class="form-label">Stok Barang</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="beratProduk" name="beratProduk">
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="beratProduk" name="stokProduk">
                             <span class="input-group-text">Pcs</span>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Select Gambar</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" id="formFile" name="gambar">
                       </div>
                     <br><br>
                     <button type="submit" class="btn btn-primary">Simpan</button>

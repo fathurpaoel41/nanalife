@@ -232,13 +232,13 @@
                 </div>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/icons/font-awesome.html">
+              <a class="nav-link" href="/dataCostumer">
                 <i class="menu-icon typcn typcn-user-outline"></i>
                 <span class="menu-title">Data Costumer</span>
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../../pages/icons/font-awesome.html">
+                <a class="nav-link" href="/dataReseller">
                   <i class="menu-icon typcn typcn-user-outline"></i>
                   <span class="menu-title">Reseller</span>
                 </a>

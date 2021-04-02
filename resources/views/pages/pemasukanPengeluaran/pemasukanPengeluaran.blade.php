@@ -22,13 +22,16 @@
             <div class="card-body">
                 <div class="col-sm-6">
                     Filter Tanggal
-                    <input class="form-control" type="text" name="daterange" value="01/01/2018 - 01/15/2018" /></div>
+                    <input class="form-control" type="text" name="daterange" value="" autocomplete/></div>
                     <script>
                         $(function() {
                             $('input[name="daterange"]').daterangepicker({
-                                opens: 'right'
+                                opens: 'right',
+                                autoUpdateInput: false,
+                                autoApply: true,
                             }, function(start, end, label) {
                                 console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                                ;
                             });
                         });
                         </script>
@@ -40,10 +43,10 @@
                             <th>Id Transaksi</th>
                             <th>Tipe</th>
                             <th>Nominal</th>
-                            <th>Catatan</th>
                             <th>Tanggal</th>
                             <th>Channel</th>
                             <th>Edited</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,11 +54,13 @@
                         <tr>
                             <td>{{$tabel->id_transaksi}}</td>
                             <td>{{$tabel->tipe}}</td>
-                            <td>{{$tabel->nominal}}</td>
-                            <td>{{$tabel->catatan}}</td>
+                            <td>Rp. {{$tabel->nominal}}</td>
                             <td>{{$tabel->tanggal_transaksi}}</td>
                             <td>{{$tabel->channel_transaksi}}</td>
                             <td>{{$tabel->edited_by}}</td>
+                            <td>
+                            <a href="editPemasukanPengeluaran/{{$tabel->id_transaksi}}"><span class="fas fa-edit"></span></a>
+                            </td>
                         </tr>
                         @endforeach
                             {{-- <td>
@@ -63,6 +68,7 @@
                             </td> --}}
                     </tbody>
                 </table>
+                {{ $tabelTransaksi->links() }}
             </div>
         </div>
     </div>
